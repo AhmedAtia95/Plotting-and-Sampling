@@ -240,6 +240,8 @@ class Ui_MainWindow(object):
 
             sampling_rate = S_Sampling_Rate = float(self.SR.toPlainText());  # Hz
             sampling_period = 1. / sampling_rate;  # s
+            sample_number = time_of_view / sampling_period;
+            sampling_time = np.linspace(0, time_of_view, sample_number);
 
             carrier_frequency = S_Frequency = float(self.Frequency.toPlainText());
             amplitude = S_Amplitude = float(self.Amplitude.toPlainText());
